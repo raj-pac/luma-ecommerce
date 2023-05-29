@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "test": "npm run cypress:run || npm run report:generate",
+    "cypress:run": "cypress run --browser chrome --spec cypress/e2e/features/*",
+    "report:generate": "node ./cucumber-html-report.js",
+    "report:clear": "rimraf --glob ./reports && rimraf --glob ./jsonlogs && rimraf --glob ./cypress/screenshots"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "cypress": "^12.0.2",
+    "esbuild": "^0.16.4",
+    "eslint": "^8.41.0",
+    "multiple-cucumber-html-reporter": "^3.0.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "eslint-plugin-cypress": "^2.13.3"
+  }
+}
